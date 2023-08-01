@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap");
+
+* {
+  border: 0;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+}
+
+header img {
+  padding: 1rem;
+  width: 600px;
+}
+
+main {
+  background-color: white;
+  padding: 16px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  border: 1px solid;
+  border-color: rgba(182, 182, 182, 1);
+  border-radius: 5px;
+  cursor: pointer;
+  height: 230px;
+  margin: 1rem;
+  position: relative;
+  transform-style: preserve-3d;
+  transform-origin: center right;
+  transition: transform 1s;
+  width: 180px;
+}
+
+.card.is_flipped {
+  transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card_face {
+  backface-visibility: hidden;
+  border-radius: 5px;
+  height: 220px;
+  position: absolute;
+  width: 170px;
+}
+
+.card_face label {
+  font-weight: bold;
+}
+
+.card_face img {
+  background-color: rgb(254, 255, 247);
+  border-bottom: 1px solid;
+  border-color: rgba(182, 182, 182, 1);
+  border-radius: 5px 5px 0 0;
+  height: 180px;
+  object-fit: cover;
+  width: 180px;
+}
+
+.card_face_front {
+  background-color: rgb(254, 255, 247);
+}
+
+.card_face_back {
+  background-color: rgb(254, 255, 247);
+  padding: 5px;
+  transform: rotateY(180deg);
+}
+
+.card_face_back label {
+  width: 100%;
+}
+
+footer {
+  padding: 1rem;
+}
+
+.button_footer {
+  background-color: rgba(65, 194, 194, 0.74);
+  border-radius: 25%;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
